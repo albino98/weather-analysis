@@ -1,0 +1,137 @@
+<html>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.2.4/dist/frappe-charts.min.iife.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <div style="margin-left:20%;">
+
+
+            <br><br>
+            <label style="font-size: large;" for="parameter">Choose a weather parameter:</label>
+            <br><br>
+                  <select style="width:50%;" class="form-select" name="parameter" id="parameter">
+                      <option value="temp">Temperature</option>
+                      <option value="feels_like">Feels Like</option>
+                      <option value="pressure">Pressure</option>
+                      <option value="sea_level">Sea Level</option>
+                      <option value="sea_level">Sea Level</option>
+                      <option value="humidity">Humidity %</option>
+                      <option value="clouds_all">Clouds %</option>
+                      <option value="wind_speed">Wind Speed</option>
+                      <option value="wind_deg">Wind Degree</option>
+                      <option value="wind_gust">Wind Gust</option>
+                      <option value="visibility">Visibility</option>
+                  </select>
+                <br><br>
+                <button type="button" class="btn btn-primary" id="generateChartBtn" onclick="generateChart()">Generate Chart</button>
+
+        </div>
+
+        <div id="chart"></div>
+
+
+
+
+
+        <script>
+            function getChartData(parameter){
+                var parameter_val = parameter;
+                $.ajax({
+                   type: "GET",
+                   url: "/getChartData",
+                   data : {
+                        'parameter' : parameter_val
+                   },
+                   dataType: "json",
+                   success : function(data) {
+                        console.log(data);
+                        createChart2(data);
+                   },
+                   error : function(request,error) {
+                        alert("errore");
+                   }
+                });
+            }
+        </script>
+        <script>
+            function generateChart(){
+                var parameter = document.getElementById("parameter");
+                var parameter_val = parameter.options[parameter.selectedIndex].value;
+                console.log(parameter_val);
+
+                getChartData(parameter_val);
+            }
+
+            function createChart2(chartData){
+                var labelsData = [];
+                var datasetValues = [];
+
+                console.log(chartData);
+                for (let i = 0; i < chartData.length; i++) {
+                  console.log(chartData[i][0]);
+                  labelsData.push(chartData[i][0]);
+                  datasetValues.push(chartData[i][1]);
+                }
+
+
+
+                const data = {
+                    labels: labelsData,
+                    datasets: [
+                        {
+                            name: "Data", type: "line",
+                            values: datasetValues
+                        }
+                    ],
+                    isNavigable: true
+                }
+
+                const chart = new frappe.Chart("#chart", {  // or a DOM element,
+                                                            // new Chart() in case of ES6 module with above usage
+                    title: "Chart",
+                    data: data,
+                    type: 'line', // or 'bar', 'line', 'scatter', 'pie', 'percentage', 'axis-mixed'
+                    height: 300,
+                    colors: ['#7cd6fd', '#743ee2', '#a61100', '#000000', '#00c900', '#c99700', '#fff200'],
+                    lineOptions: {
+                        regionFill: 1,
+                        hideDots: 1
+                    }
+                })
+         }
+        </script>
+        <script>
+        function createChart(){
+            const data = {
+                labels: ["12am-3am", "3am-6pm", "6am-9am", "9am-12am",
+                    "12pm-3pm", "3pm-6pm", "6pm-9pm", "9am-12am"
+                ],
+                datasets: [
+                    {
+                        name: "Some Data", type: "line",
+                        values: [25, 40, 30, 35, 8, 52, 17, -4]
+                    },
+                    {
+                        name: "Others", type: "line",
+                        values: [25, 23, 320, -1, 8, 2, 17, -43]
+                    },
+                    {
+                        name: "Another Set", type: "line",
+                        values: [25, 50, -10, 15, 18, 32, 27, 14]
+                    }
+                ],
+                isNavigable: true
+            }
+
+            const chart = new frappe.Chart("#chart", {  // or a DOM element,
+                                                        // new Chart() in case of ES6 module with above usage
+                title: "My Awesome Chart",
+                data: data,
+                type: 'line', // or 'bar', 'line', 'scatter', 'pie', 'percentage', 'axis-mixed'
+                height: 250,
+                colors: ['#7cd6fd', '#743ee2', '#a61100', '#000000', '#00c900', '#c99700', '#fff200']
+            })
+         }
+        </script>
+    </body>
+</html>
