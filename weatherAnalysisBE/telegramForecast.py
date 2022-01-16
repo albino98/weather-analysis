@@ -39,7 +39,7 @@ def saveForecastOnDb(weather):
     mydb = connectToMySql()
     try:
         mycursor = mydb.cursor()
-        sql = "INSERT INTO `forecastData`(`temp`, `feels_like`, `temp_min`, `temp_max`, `pressure`, `sea_level`, `grnd_level`, `humidity`, `weather_id`, `weather_main`, `weather_desc`, `clouds_all`, `wind_speed`, `wind_deg`, `wind_gust`, `visibility`, `pop`, `pod`, `dt`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+        sql = "INSERT INTO `forecastdata`(`temp`, `feels_like`, `temp_min`, `temp_max`, `pressure`, `sea_level`, `grnd_level`, `humidity`, `weather_id`, `weather_main`, `weather_desc`, `clouds_all`, `wind_speed`, `wind_deg`, `wind_gust`, `visibility`, `pop`, `pod`, `dt`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
         val = (temp,feels_like,temp_min,temp_max,pressure,sea_level,grnd_level,humidity,weather_id,weather_main,weather_desc,clouds_all,wind_speed,wind_deg,wind_gust,visibility,pop,pod,dateTime)
         mycursor.execute(sql, val)
         mydb.commit()

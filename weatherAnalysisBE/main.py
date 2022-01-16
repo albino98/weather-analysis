@@ -21,7 +21,7 @@ def getChartData():
     result = {}
     try:
         mycursor = mydb.cursor()
-        query = "SELECT dt, "+parameter+" FROM `forecastData` ORDER BY `dt` ASC"
+        query = "SELECT dt, "+parameter+" FROM `forecastdata` ORDER BY `dt` ASC"
         mycursor.execute(query)
         query_result = mycursor.fetchall()
         mydb.close()
