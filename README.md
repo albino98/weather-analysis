@@ -2,6 +2,8 @@
 
 ## Description
 
+The purpose of the project is to historicize and analyze the meteorological data of a certain area, to understand how the weather will change.
+
 The project consists of a python script (to be scheduled at 00:00 every day) and a python application with flask. 
 
 **The script** (telegramForecast.py):
