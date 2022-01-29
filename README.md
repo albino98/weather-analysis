@@ -8,7 +8,7 @@
 
 ## Description
 
-The purpose of the project is to historicize and analyze the meteorological data of a certain area, to understand how the weather will change.
+The purpose of the project is to historicize and analyze the meteorological data of a certain area, to understand how the weather will change and carry out predictive analysis based on the data collected using machine learning.
 
 The project consists of a python script (to be scheduled at 00:00 every day) and a python application with flask. 
 
@@ -78,3 +78,17 @@ To schedule the weather forecast script on PythonAnywhere (or on your server) re
 
 ![image](https://user-images.githubusercontent.com/63566699/151669541-3dc485b7-e5a7-4934-9026-4f6f47c8aa28.png)
 
+## To Do
+
+**The main goal for the future, after having historicized a lot of climate data, is to carry out predictive analysis on climate change using machine learning.**
+
+Other improvements are:
+
+|   |Description|State|   |
+|---|---|---|---|
+|1|Add the legend|✔️|   |
+|2|Allow you to add multiple datasets in the same chart. For example to compare two or more weather parameters.|❌|   |
+|3|Allow you to create the chart with data from a range of dates.|❌|   |
+|4|Add a custom representation for the wind direction parameter.|❌|    |
+|5|Allow chart customization: change the chart type (bar, line, etc.). Hide the dots or not ecc.|❌|  |
+|6|Export the chart and data|❌|  |
