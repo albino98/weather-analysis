@@ -1,5 +1,5 @@
 <html>
-    <body>
+    <body style="background-color: #f2f6fc;">
         <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.2.4/dist/frappe-charts.min.iife.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -14,11 +14,10 @@
                       <option value="feels_like">Feels Like</option>
                       <option value="pressure">Pressure</option>
                       <option value="sea_level">Sea Level</option>
-                      <option value="sea_level">Sea Level</option>
-                      <option value="humidity">Humidity %</option>
-                      <option value="clouds_all">Clouds %</option>
+                      <option value="humidity">Humidity</option>
+                      <option value="clouds_all">Clouds</option>
                       <option value="wind_speed">Wind Speed</option>
-                      <option value="wind_deg">Wind Degree</option>
+                      <option value="wind_deg">Wind Direction</option>
                       <option value="wind_gust">Wind Gust</option>
                       <option value="visibility">Visibility</option>
                   </select>
@@ -27,8 +26,90 @@
 
         </div>
 
-        <div id="chart"></div>
 
+        <div id="chart" style="width:90%; margin-left:5%;">
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div id="legendDiv" style="width:90%; margin-left:5%;">
+            <h2>Legend</h2><br>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Parameter</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Unit of measure</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Temperature</td>
+                  <td>Temperature</td>
+                  <td>°C</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Feels Like</td>
+                  <td>This temperature parameter accounts for the human perception of weather</td>
+                  <td>°C</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Pressure</td>
+                  <td>Atmospheric pressure on the sea level by default</td>
+                  <td>hPa</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Sea Level</td>
+                  <td>Atmospheric pressure on the sea level</td>
+                  <td>hPa</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Humidity</td>
+                  <td>Humidity</td>
+                  <td>%</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Clouds</td>
+                  <td>Cloudiness</td>
+                  <td>%</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>Wind Speed</td>
+                  <td>Wind speed</td>
+                  <td>meter/sec</td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>Wind Direction</td>
+                  <td>Wind direction</td>
+                  <td>degrees (meteorological)</td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>Wind Gust</td>
+                  <td>Wind gust</td>
+                  <td>meter/sec</td>
+                </tr>
+                <tr>
+                  <th scope="row">10</th>
+                  <td>Visibility</td>
+                  <td>Average visibility</td>
+                  <td>meters</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
 
 
 
