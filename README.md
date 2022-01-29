@@ -8,7 +8,7 @@
 
 ## Description
 
-The purpose of the project is to historicize and analyze the meteorological data of a certain area, to understand how the weather will change and carry out predictive analysis based on the data collected using machine learning.
+**The purpose of the project is to historicize and analyze the meteorological data of a certain area, to understand how the weather will change and carry out predictive analysis based on the data collected using machine learning.**
 
 The project consists of a python script (to be scheduled at 00:00 every day) and a python application with flask. 
 
@@ -76,7 +76,7 @@ The command will generate the .sql script at /home/user on PythonAnywhere:
 
 To schedule the weather forecast script on PythonAnywhere (or on your server) remember to set the correct version of python:
 
-![image](https://user-images.githubusercontent.com/63566699/151669541-3dc485b7-e5a7-4934-9026-4f6f47c8aa28.png)
+![image](https://user-images.githubusercontent.com/63566699/151678490-8c98ef27-2706-4bd7-b17b-01dd7d7ad2bd.png)
 
 ## To Do
 
