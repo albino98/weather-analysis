@@ -1,6 +1,6 @@
 <p align="center">
-<a href="https://www.flaticon.com/free-icons/graph" target="_blank" >
-<img src="https://user-images.githubusercontent.com/63566699/151661097-ce9b885f-ca37-4c38-a435-dc8033e624b6.png" alt="weather-analysis" />
+<a href="https://www.flaticon.com/free-icons/climate-change" target="_blank">
+<img src="https://user-images.githubusercontent.com/63566699/151680375-6bcb7c32-f6bb-4541-bff5-a0c80b065e82.png" alt="Weather-Analysis">
 </a>
 </p>
 
