@@ -92,3 +92,5 @@ Other improvements are:
 |4|Add a custom representation for the wind direction parameter.|❌|    |
 |5|Allow chart customization: change the chart type (bar, line, etc.). Hide the dots or not ecc.|❌|  |
 |6|Export the chart and data|❌|  |
+
+**Feel free to open an issue to contribute and improve the project.**
