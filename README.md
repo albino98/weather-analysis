@@ -72,4 +72,9 @@ The command will generate the .sql script at /home/user on PythonAnywhere:
 
 ![image](https://user-images.githubusercontent.com/63566699/151668840-244b22db-dc86-412e-a88d-140bf449e64b.png)
 
+### Task Scheduling
+
+To schedule the weather forecast script on PythonAnywhere (or on your server) remember to set the correct version of python:
+
+![image](https://user-images.githubusercontent.com/63566699/151669541-3dc485b7-e5a7-4934-9026-4f6f47c8aa28.png)
 
