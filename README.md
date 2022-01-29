@@ -94,3 +94,7 @@ Other improvements are:
 |6|Export the chart and data|❌|  |
 
 **Feel free to open an issue to contribute and improve the project.**
+
+## License
+
+[MIT License](https://github.com/albino98/weather-analysis/blob/master/LICENSE)
