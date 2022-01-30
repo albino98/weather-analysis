@@ -84,14 +84,16 @@ To schedule the weather forecast script on PythonAnywhere (or on your server) re
 
 Other improvements are:
 
-|   |Description|State|   |
+|   |Description|State|Notes|
 |---|---|---|---|
 |1|Add the legend|✔️|   |
 |2|Allow you to add multiple datasets in the same chart. For example to compare two or more weather parameters.|❌|   |
 |3|Allow you to create the chart with data from a range of dates.|❌|   |
 |4|Add a custom representation for the wind direction parameter.|❌|    |
 |5|Allow chart customization: change the chart type (bar, line, etc.). Hide the dots or not ecc.|❌|  |
-|6|Export the chart and data|❌|  |
+|6|Export the chart and data.|❌|  |
+|7|Development of an artificial intelligence in Python able to perform predictive weather analysis with historicized data.|❌|To be developed in the future, when much more weather data has been historicized.|
+
 
 **Feel free to open an issue to contribute and improve the project.**
 
