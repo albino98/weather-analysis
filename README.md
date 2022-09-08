@@ -86,7 +86,7 @@ Other improvements are:
 
 |   |Description|State|Notes|
 |---|---|---|---|
-|1|Add the legend|✔️|   |
+|1|Add captions|✔️|   |
 |2|Allow you to add multiple datasets in the same chart. For example to compare two or more weather parameters.|❌|   |
 |3|Allow you to create the chart with data from a range of dates.|❌|   |
 |4|Add a custom representation for the wind direction parameter.|❌|    |
