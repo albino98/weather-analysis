@@ -97,6 +97,11 @@ Other improvements are:
 
 **Feel free to open an issue to contribute and improve the project.**
 
+<a href="https://www.buymeacoffee.com/albyc" target=”_blank”>
+         <img alt="BuyMeACoffee" src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
+         style="height: 30px !important; width: 150px !important">
+      </a>
+
 ## License
 
 [MIT License](https://github.com/albino98/weather-analysis/blob/master/LICENSE)
